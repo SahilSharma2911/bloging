@@ -41,6 +41,7 @@ const SinglePage = async ({ params }) => {
                 <Image
                   src={data.user.image}
                   className="rounded-[50%]  object-cover" width={55} height={55}
+                  alt="#"
                 />
               )}
             </div>
