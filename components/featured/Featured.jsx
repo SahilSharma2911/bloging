@@ -11,7 +11,7 @@ const Featured = () => {
       </h1>
       <div className="flex mt-[30px] items-center gap-[60px]">
         <div className="h-[350px] hidden md:flex ">
-          <Image src={p1} alt=""  className="object-cover" />
+          <Image src={p1} alt="#"  className="object-cover" priority/>
         </div>
         <div className="flex flex-col gap-[10px] sm:gap-[20px]">
           <h1 className="text-[25px] sm:text-[30px]">Lorem ipsum dolor sit amet alim consectetur adipisicing elit.</h1>

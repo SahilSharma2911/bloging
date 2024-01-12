@@ -12,6 +12,8 @@ const MenuPost = ({ withImage }) => {
             <Image
               src={p1}
               className="rounded-[50%] h-[60px] w-[60px] object-cover"
+              alt="#"
+              priority
             />
           </div>
         )}
@@ -23,8 +25,8 @@ const MenuPost = ({ withImage }) => {
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque, ut.
           </h3>
           <div className="text-[14px]">
-            <spam className="">John Doe</spam>
-            <spam className="text-gray-400"> - 10.03.2024</spam>
+            <span className="">John Doe</span>
+            <span className="text-gray-400"> - 10.03.2024</span>
           </div>
         </div>
       </Link>
@@ -34,6 +36,7 @@ const MenuPost = ({ withImage }) => {
             <Image
               src={p1}
               className="rounded-[50%] h-[60px] w-[60px] object-cover"
+              alt="#"
             />
           </div>
         )}
@@ -45,8 +48,8 @@ const MenuPost = ({ withImage }) => {
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque, ut.
           </h3>
           <div className="text-[14px]">
-            <spam className="">John Doe</spam>
-            <spam className="text-gray-400"> - 10.03.2024</spam>
+            <span className="">John Doe</span>
+            <span className="text-gray-400"> - 10.03.2024</span>
           </div>
         </div>
       </Link>
@@ -56,6 +59,7 @@ const MenuPost = ({ withImage }) => {
             <Image
               src={p1}
               className="rounded-[50%] h-[60px] w-[60px] object-cover"
+              alt="#"
             />
           </div>
         )}
@@ -67,8 +71,8 @@ const MenuPost = ({ withImage }) => {
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque, ut.
           </h3>
           <div className="text-[14px]">
-            <spam className="">John Doe</spam>
-            <spam className="text-gray-400"> - 10.03.2024</spam>
+            <span className="">John Doe</span>
+            <span className="text-gray-400"> - 10.03.2024</span>
           </div>
         </div>
       </Link>
@@ -78,6 +82,7 @@ const MenuPost = ({ withImage }) => {
             <Image
               src={p1}
               className="rounded-[50%] h-[60px] w-[60px] object-cover"
+              alt="#"
             />
           </div>
         )}
@@ -89,12 +94,11 @@ const MenuPost = ({ withImage }) => {
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque, ut.
           </h3>
           <div className="text-[14px]">
-            <spam className="">John Doe</spam>
-            <spam className="text-gray-400"> - 10.03.2024</spam>
+            <span className="">John Doe</span>
+            <span className="text-gray-400"> - 10.03.2024</span>
           </div>
         </div>
       </Link>
-      
     </div>
   );
 };

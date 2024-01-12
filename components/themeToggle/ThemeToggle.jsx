@@ -14,9 +14,9 @@ const ThemeToggle = () => {
 
   return (
     <div className={`w-[40px] h-[20px] rounded-[50px] flex relative p-[3px] mx-4 ${containerClasses}`} onClick={toggle}>
-      <Image src={moon} className='w-4 h-4'/>
-      <div className={`w-[15px] h-[15px] rounded-[50%] absolute ${containerClasses2}`}></div>
-      <Image src={sun} className='w-4 h-4'/>
+      <Image src={moon} className='' alt="'#" width={40} height={40}/>
+      <div className={`w-[15px] h-[14px] rounded-[50%] absolute ${containerClasses2}`}></div>
+      <Image src={sun} className='' alt="'#" width={40} height={40}/>
     </div>
   )
 }

@@ -17,9 +17,9 @@ const Footer = () => {
           repellendus dorales.
         </p>
         <div className="mt-[10px] flex gap-[10px]">
-          <Image src="/facebook.png" alt="" width={18} height={18} />
-          <Image src="/instagram.png" alt="" width={18} height={18} />
-          <Image src="/youtube.png" alt="" width={18} height={18} />
+          <Image src="/facebook.png" alt="#" width={18} height={18} />
+          <Image src="/instagram.png" alt="#" width={18} height={18} />
+          <Image src="/youtube.png" alt="#" width={18} height={18} />
         </div>
       </div>
       <div className="flex  flex-1 gap-[10px] sm:gap-[50px] w-[100%] md:w-0 lg:gap-[100px] justify-between md:justify-center ml-0 md:ml-5 ">

@@ -3,7 +3,7 @@ import GoogleProvider from "next-auth/providers/google"
 import { PrismaAdapter } from "@auth/prisma-adapter"
 import prisma from "./connect"
 import { Prisma } from "@prisma/client"
-
+import { getServerSession } from "next-auth";
 
 export const authOptions = ({
   adapter: PrismaAdapter(prisma),
@@ -18,3 +18,5 @@ export const authOptions = ({
     }),
   ],
 })
+
+export const getAuthSession = () => getServerSession(authOptions);
