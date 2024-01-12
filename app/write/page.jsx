@@ -79,7 +79,7 @@ const WritePage = () => {
 
   // Client-side useEffect
   useEffect(() => {
-    if (file) {
+    if (typeof window !== "undefined" && file) {
       const reader = new FileReader();
       reader.onloadend = () => {
         setImagePreview(reader.result);
