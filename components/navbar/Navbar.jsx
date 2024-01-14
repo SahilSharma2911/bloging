@@ -14,6 +14,7 @@ import { ThemeContext } from "@/context/ThemeContext";
 
 const Navbar = () => {
   const { toggle, theme } = useContext(ThemeContext);
+  console.log(theme)
   const containerClasses =
     theme === "white" ? "bg-white text-black" : "bg-black text-white";
 
