@@ -9,7 +9,7 @@ import culture from "../../public/culture.png";
 import coding from "../../public/coding.png";
 
 const getData = async () => {
-  const res = await fetch("http://localhost:3000/api/categories", {
+  const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/api/categories`, {
     cache: "no-store",
   });
 
@@ -22,7 +22,7 @@ const getData = async () => {
 
 const CategoryList = async () => {
   const data = await getData();
-  
+
   const categoryColors = {
     style: "#57c4ff31",
     fashion: "#da85c731",
@@ -47,7 +47,6 @@ const CategoryList = async () => {
           >
             {item.img && (
               <Image
-                // src="/facebook.png"
                 src={item.img}
                 width={32}
                 height={32}

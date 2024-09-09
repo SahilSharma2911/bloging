@@ -6,7 +6,6 @@ import p1 from "../../public/p1.jpeg";
 import useSWR from "swr";
 import { useSession } from "next-auth/react";
 
-
 const fetcher = async (url) => {
   const res = await fetch(url);
 
@@ -21,9 +20,6 @@ const fetcher = async (url) => {
 };
 
 const Comments = ({ postSlug }) => {
-
-
-
   const { status } = useSession();
 
   const [desc, setDesc] = useState("");
@@ -36,7 +32,7 @@ const Comments = ({ postSlug }) => {
   };
 
   const { data, mutate, isLoading } = useSWR(
-    `http://localhost:3000/api/comments?postSlug=${postSlug}`,
+    `${process.env.NEXT_PUBLIC_API_URL}/api/comments?postSlug=${postSlug}`,
     fetcher
   );
 

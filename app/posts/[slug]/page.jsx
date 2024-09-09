@@ -5,9 +5,12 @@ import p1 from "../../../public/p1.jpeg";
 import Comments from "@/components/comments/Comments";
 
 const getData = async (slug) => {
-  const res = await fetch(`http://localhost:3000/api/posts/${slug}`, {
-    cache: "no-store",
-  });
+  const res = await fetch(
+    `${process.env.NEXT_PUBLIC_API_URL}/api/posts/${slug}`,
+    {
+      cache: "no-store",
+    }
+  );
 
   if (!res.ok) {
     throw new Error("failed");
@@ -23,13 +26,16 @@ const SinglePage = async ({ params }) => {
   return (
     <div className="mx-[30px] sm:mx-[100px] mt-[45px]">
       <div className="flex md:hidden">
-          {data?.img && (
-            <Image
-              src={data.img} width={400}  height={400}
-              className=" object-cover" alt="#"
-            />
-          )}
-        </div>
+        {data?.img && (
+          <Image
+            src={data.img}
+            width={400}
+            height={400}
+            className=" object-cover"
+            alt="#"
+          />
+        )}
+      </div>
       <div className="flex flex-col md:flex-row md:items-center gap-[50px] mt-8 md:mt-0 justify-between">
         <div className="">
           <h1 className="text-2xl xl:text-3xl font-semibold mb-[50px]">
@@ -40,7 +46,9 @@ const SinglePage = async ({ params }) => {
               {data?.user?.image && (
                 <Image
                   src={data.user.image}
-                  className="rounded-[50%]  object-cover" width={55} height={55}
+                  className="rounded-[50%]  object-cover"
+                  width={55}
+                  height={55}
                   alt="#"
                 />
               )}
@@ -54,8 +62,11 @@ const SinglePage = async ({ params }) => {
         <div className="hidden md:flex">
           {data?.img && (
             <Image
-              src={data.img} width={300}  height={300}
-              className=" object-cover" alt="#"
+              src={data.img}
+              width={300}
+              height={300}
+              className=" object-cover"
+              alt="#"
             />
           )}
         </div>
