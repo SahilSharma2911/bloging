@@ -29,6 +29,7 @@ const Comments = ({ postSlug }) => {
       body: JSON.stringify({ desc, postSlug }),
     });
     mutate();
+    setDesc("");
   };
 
   const { data, mutate, isLoading } = useSWR(
@@ -44,6 +45,7 @@ const Comments = ({ postSlug }) => {
           <textarea
             className="p-[20px] w-[100%] text-black"
             placeholder="write a commnet"
+            value={desc}
             onChange={(e) => setDesc(e.target.value)}
           ></textarea>
           <button
